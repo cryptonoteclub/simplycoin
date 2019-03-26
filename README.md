@@ -2,9 +2,9 @@ Copyright (c) 2019, The SimplyCoin Developers.
 
 ## Building SimplyCoin
 
-### ubuntu
+### On Ubuntu
 
-requirements: 
+requirements:<br />
 sudo apt install git libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake -y
 
 ##### Downloading & Installing
@@ -21,8 +21,7 @@ To build, change to a directory where this file is located, and run make. The re
 
 ### On Windows
 
-requirements :
-
+requirements :<br />
 1. Install MinGW (default install) <br />
 http://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download
   * Select 'msys-base' from the install options
