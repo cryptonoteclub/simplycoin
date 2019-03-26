@@ -1,15 +1,13 @@
-#SimplyCoin
-
 Copyright (c) 2019, The SimplyCoin Developers.   
 
 ## Building SimplyCoin
 
-##### ubuntu
+### ubuntu
 
 requirements: 
 sudo apt install git libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake -y
 
-# Downloading & Installing
+##### Downloading & Installing
 Clone the repository:
 git clone https://github.com/simplycoin/simplycoin
 
@@ -21,7 +19,7 @@ To build, change to a directory where this file is located, and run make. The re
 
 
 
-##### On Windows
+### On Windows
 
 requirements :
 
@@ -56,7 +54,7 @@ http://www.cmake.org/files/v3.1.2/cmake-3.2.1-win32-x86.exe
 9. Install Python 2.7 (http://python.org):<br />
 https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64.msi
 
-# Downloading & Installing
+##### Downloading & Installing
 Clone the repository:
 git clone https://github.com/simplycoin/simplycoin
 
