@@ -64,5 +64,5 @@ mkdir build
 cd build
 cmake -G "Visual Studio 12 Win64" ..
 ```
-Open solution whit Visual Studio abd Build 
+Open solution whit Visual Studio and Build 
 
