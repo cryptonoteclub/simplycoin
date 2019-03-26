@@ -3,39 +3,69 @@
 Copyright (c) 2019, The SimplyCoin Developers.   
 
 ## Building SimplyCoin
-### On *nix
 
-Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, and Boost 1.55.
+##### ubuntu
 
-You may download them from:
+requirements: 
+sudo apt install git libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake -y
 
-* http://gcc.gnu.org/
-* http://www.cmake.org/
-* http://www.boost.org/
-* Alternatively, it may be possible to install them using a package manager.
+# Downloading & Installing
+Clone the repository:
+git clone https://github.com/simplycoin/simplycoin
 
-To build, change to a directory where this file is located, and run `make`. The resulting executables can be found in `build/release/src`.
+cd simplycoin
 
-**Advanced options:**
+make
 
-* Parallel build: run `make -j<number of threads>` instead of `make`.
-* Debug build: run `make build-debug`.
-* Test suite: run `make test-release` to run tests in addition to building. Running `make test-debug` will do the same to the debug version.
-* Building with Clang: it may be possible to use Clang instead of GCC, but this may not work everywhere. To build, run `export CC=clang CXX=clang++` before running `make`.
+To build, change to a directory where this file is located, and run make. The resulting executables can be found in build/release/src.
 
-### On Windows
-Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, and Boost 1.55. You may download them from:
 
-* http://www.microsoft.com/
-* http://www.cmake.org/
-* http://www.boost.org/
 
-To build, change to a directory where this file is located, and run theas commands: 
+##### On Windows
+
+requirements :
+
+1. Install MinGW (default install) <br />
+http://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download
+  * Select 'msys-base' from the install options
+  * Select 'msys-patch (bin)' and 'msys-zip' from All Packages
+  * Select 'Apply changes' from Installation menu
+2. Add msys to path by executing the following in command prompt (you must run it as admin):
+    ```
+    SETX PATH "%PATH%;C:\MinGW\msys\1.0\bin" /M
+    ```
+3. Install git <br />
+http://git-scm.com/download/win
+4. Download and install Microsoft Visual Studio Community 2013 for Windows Desktop:<br />
+https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
+5. Add path to .NET framework by executing the following in command prompt (you must run it as admin):
+    ```
+    SETX PATH "%PATH%;C:\Program Files (x86)\MSBuild\12.0\bin\amd64" /M
+    ```
+6. Download and install boost binaries boost_1_57_0-msvc-12.0-64.exe from http://sourceforge.net/projects/boost/files/boost-binaries into c:\local\boost_1_57_0<br />
+http://sourceforge.net/projects/boost/files/boost-binaries/1.57.0/boost_1_57_0-msvc-12.0-64.exe/download
+7. Set environmental variables for boost by executing the following in command prompt (you must run it as admin):
+    ```
+    SETX BOOST_ROOT "C:\local\boost_1_57_0" /M
+
+    SETX BOOST_LIBRARYDIR "C:\local\boost_1_57_0\lib64-msvc-12.0" /M
+    ```
+8. Install the latest version of Cmake (http://www.cmake.org):<br />
+Version in the time of writing:
+http://www.cmake.org/files/v3.1.2/cmake-3.2.1-win32-x86.exe
+9. Install Python 2.7 (http://python.org):<br />
+https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64.msi
+
+# Downloading & Installing
+Clone the repository:
+git clone https://github.com/simplycoin/simplycoin
+
+cd simplycoin
+
 ```
 mkdir build
 cd build
 cmake -G "Visual Studio 12 Win64" ..
 ```
+Open solution whit Visual Studio abd Build 
 
-And then do Build.
-Good luck!
